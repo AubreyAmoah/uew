@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.flexcenter{
+    justify-content: center;
+}
+
+.flexaligncenter{
+    align-items: center;
+}
+
+.flextop{
+    align-items: start;
+}
+
+.flexbetween{
+    justify-content: space-between;
+}
+
+.flexeven{
+    justify-content: space-evenly;
+}
+.flexend{
+    justify-content: flex-end;
+}

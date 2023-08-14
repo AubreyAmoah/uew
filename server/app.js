@@ -7,6 +7,8 @@ const db = require('./config/database');
 
 db.connect();
 
+app.use(express.static('files'));
+
 app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: false}));

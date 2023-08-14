@@ -1,0 +1,31 @@
+.search-box-container {
+    position: relative;
+}
+
+.search-box{
+    padding: 10px 60px 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+
+    &__image{
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translateY(-50%);
+    }
+}
+
+.search-box:focus{
+    outline: none;
+}
+
+.search-box-container-alt{
+    width: 40%;
+    border: 1px solid #51666C !important;
+    border-radius: 5px !important;
+}
+
+
+  

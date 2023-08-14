@@ -1,0 +1,24 @@
+.column-two-first{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.column-six-first{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+
+.column-six-second{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.column-one{
+    display: grid;
+    // grid-template-columns: 1fr;
+}
+
+.column-three-equal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
