@@ -8,6 +8,7 @@ const courseSchema = new mongoose.Schema({
     enrollment_key : { type: String },
     course_cover: { type: String, default: profilePath},
     date_added: { type: Date, default: date},
+    students: [{type: mongoose.Schema.Types.ObjectId, ref: 'users'}],
     owner:{type: mongoose.Schema.Types.ObjectId, ref: 'users'}
 });
 

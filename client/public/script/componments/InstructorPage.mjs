@@ -2,6 +2,10 @@ const root = document.getElementById('root');
 let InstructorPage = () => {
     return (
         root.innerHTML = `
+            <div id="alert" class="alert hide__all">
+                <img id="alert-image" class="alert__img margin-left-tiny" src="" alt="">
+                <span id="alert-text" class="alert__text margin-left-small"></span>
+            </div>
             <div class="header">
                 <div class="navbar header__one flexend">
                     <button class="btn btn-transparent">
@@ -9,54 +13,22 @@ let InstructorPage = () => {
                     </button>
                     <div class="flex">
                         <img class="icon_small" src="/assets/coin.png" alt="">
-                        <span class="nav-text__primary margin-right-small">0.00</span>
+                        <span id="balance" class="nav-text__primary margin-right-small"></span>
                     </div>
                 
-                    <span class = "nav-text__primary margin-right-small">Joseph</span>
-                    <button class="btn btn-red margin-right-small">Logout</button>
+                    <span id="getfname" class = "nav-text__primary margin-right-small"></span>
                 </div>
                 </div>
                 
                 <div class="min-container">
                 <h1>Recently Created Courses</h1>
-                <div class="course-container">
-                    <div class="card-course__wide margin-left-small">
-                        <img src="/assets/notebook-g5ee59b7f0_1280.jpg" alt="">
+                <div id="recent_courses" class="course-container">
+                    <div id="course" class="card-course__wide margin-left-small">
+                        <img id="course_img" src="/assets/notebook-g5ee59b7f0_1280.jpg" alt="">
                 
-                        <span>ICTE 219</span>
+                        <span id="course_code">ICTE 219</span>
                 
-                        <button>Edit</button>
-                    </div>
-                
-                    <div class="card-course__wide margin-left-small">
-                        <img src="/assets/introduction-g36920128b_1280.jpg" alt="">
-                
-                        <span>ICTE 211</span>
-                        
-                        <button>Edit</button>
-                    </div>
-                
-                    <div class="card-course__wide margin-left-small">
-                        <img src="/assets/computer.jpg" alt="">
-                
-                        <span>ICTE 111</span>
-                        
-                        <button>Edit</button>
-                    </div>
-                
-                    <div class="card-course__wide margin-left-small">
-                        <img src="/assets/watercolor-g.jpg" alt="">
-                
-                        <span>GDP 114</span>
-                        
-                        <button>Edit</button>
-                    </div>
-                    <div class="card-course__wide margin-left-small">
-                        <img src="/assets/notebook-g97d6ed086_1280.jpg" alt="">
-                
-                        <span>ICTE 314</span>
-                        
-                        <button>Edit</button>
+                        <button id="edit_course_btn">Edit</button>
                     </div>
                 </div>
                 </div>
@@ -72,48 +44,27 @@ let InstructorPage = () => {
                     </div>
                 
                     <div class="margin-top-small">
-                        <a class="margin-left-small btn-select select-active" href="">My Courses</a>
-                        <a class="margin-left-small btn-select" href="">New Course</a>
+                        <button id="my_courses_btn" class="margin-left-small btn-select select-active">My Courses</button>
+                        <button id="new_courses_btn" class="margin-left-small btn-select">New Course</button>
                     </div>
                 
-                    <div class="column-three-equal">
+                    <div id="my_courses_list" class="column-three-equal">
                         <div class="card-course flex-column-center margin-top margin-left-small">
                             <img class="card-course__img" src="/assets/watercolor-g.jpg" alt="">
                             <span class="card-course__title margin-top-tiny">GPD 114</span>
                             <button class="card-course__btn margin-top textcenter">View</button>
                         </div>
-                
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/introduction-g36920128b_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 211</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-                
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/background-gd03be0f36_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 255</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-                
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/computer.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 111</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-                
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/notebook-g5ee59b7f0_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 219</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-                
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/notebook-g97d6ed086_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 341</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
+                    </div>
+
+                    <div id="new_courses_list">
+                        <div class="">
+                            <input type="text" name="course_code" id="course_code" placeholder="Course Code">
+                            <input type="text" name="course_name" id="course_name" placeholder="Course Name">
+                            <input type="text" name="enrollment_key" id="enrollment_key" placeholder="Enrollment Key">
+                            <button id="create_course_btn">Create</button>
                         </div>
                     </div>
-                    <button class="btn-secondary-alt margin-top-big centeritem">All Courses</button>
+
                 </div>
                 
                 <div class="">
@@ -178,6 +129,20 @@ let InstructorPage = () => {
                             <button>Send</button>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div id="overlay-setup" class="overlay hide__all">
+                <div class="overlay__item">
+
+                    <span class="overlay__item--heading">You need to set up your name</span>
+
+                    <div class="overlay__item--content-flex__close">
+                        <input type="text" name="first_name" id="first_name" placeholder="first name">
+                        <input type="text" name="last_name" id="last_name" placeholder="last name">
+                    </div>
+
+                    <button id="btn_save_setup" class="overlay__item--btn-bottom">Save</button>
                 </div>
             </div>
         `

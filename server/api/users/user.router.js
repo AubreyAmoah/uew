@@ -1,4 +1,4 @@
-const { userLogin, userUpdate, createCourse, getAllCourses, getCourse, getMyCourses, findCourseByName, deleteCourseByID, updateCourse, updateCourseImage, createChapter, updateChapter, getChapter, getAllChapters, findChapterByName, createVideo, getVideo, getAllVideos, findVideoByName } = require('./user.controller');
+const { userLogin, userUpdate, createCourse, getAllCourses, getCourse, getMyCourses, findCourseByName, deleteCourseByID, updateCourse, updateCourseImage, createChapter, updateChapter, getChapter, getAllChapters, findChapterByName, createVideo, getVideo, getAllVideos, findVideoByName, getUser } = require('./user.controller');
 const fileUpload = require('express-fileupload');
 
 const filesPayloadExists = require('../../middleware/filesPayloadExists');
@@ -9,12 +9,13 @@ const router = require('express').Router();
 
 // User Routes
 router.post('/login', userLogin);
+router.get('/get/user/:address', getUser);
 router.patch('/update', userUpdate);
 
 //Course Routes
 router.post('/create/course', createCourse);
 router.get('/get/course', getCourse);
-router.get('/get/my/courses', getMyCourses);
+router.get('/get/my/courses/:address', getMyCourses);
 router.get('/get/courses', getAllCourses);
 router.get('/get/courses/search', findCourseByName);
 router.patch('/course/update/:id', updateCourse);

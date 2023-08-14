@@ -5,6 +5,7 @@ const userSchema = new mongoose.Schema({
   last_name: { type: String, default: null },
   address: { type: String, required: [true,'Please provide address'], unique: true },
   recently_accessed: [{type: mongoose.Schema.Types.ObjectId, ref: 'courses'}],
+  courses: [{type: mongoose.Schema.Types.ObjectId, ref: 'courses'}],
   loggin_in_as: {type:String}
 });
 

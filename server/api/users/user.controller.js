@@ -55,6 +55,21 @@ module.exports = {
               });
         }
     },
+    getUser: async(req, res) => {
+        const { address } = req.params;
+
+        await User.findOne({ address })
+        .then(user => {
+            console.log(user)
+            return res.status(200).json({user})
+          })
+          .catch(err => {
+            return res.status(400).json({
+                success: 1,
+                data: err
+            })
+          });
+    },
     userUpdate : async(req, res) => {
         const { first_name, last_name, address } = req.body;
 
@@ -146,7 +161,7 @@ module.exports = {
         });
     },
     getMyCourses : async(req, res) => {
-        const {address} = req.body;
+        const { address } = req.params;
 
         try {
             const user = await User.find({ address });

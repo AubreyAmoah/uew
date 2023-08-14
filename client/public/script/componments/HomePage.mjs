@@ -48,57 +48,6 @@ let HomePage = () => {
                 </div>
             </div>
 
-            <div class="body column-two-first margin-top">
-                <div class="">
-                    <div class="navbar">
-                        <div class="search-box-container search-box-container-alt margin-left-small">
-                            <input type="text" class="search-box" placeholder="Search Courses">
-                            <img src="/assets/search-black.png" alt="search img" class="search-box__image">
-                        </div>
-                        <button class="btn-secondary margin-left-tiny">Go</button>
-                    </div>
-
-                    <div class="column-three-equal">
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/watercolor-g.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">GPD 114</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/introduction-g36920128b_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 211</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/background-gd03be0f36_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 255</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/computer.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 111</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/notebook-g5ee59b7f0_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 219</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-
-                        <div class="card-course flex-column-center margin-top margin-left-small">
-                            <img class="card-course__img" src="/assets/notebook-g97d6ed086_1280.jpg" alt="">
-                            <span class="card-course__title margin-top-tiny">ICTE 341</span>
-                            <button class="card-course__btn margin-top textcenter">View</button>
-                        </div>
-                    </div>
-                    <button class="btn-secondary-alt margin-top-big centeritem">All Courses</button>
-                </div>
-            </div>
-
             <div id="overlay" class="overlay hide__all">
                 <div class="overlay__item">
                     <div id="overlay-close" class="overlay__item--close">
@@ -112,7 +61,7 @@ let HomePage = () => {
                         </button>
                         <button class="overlay__item--content-flex__btn">
                             <img class="overlay__item--content-flex__btn--image" src="/assets/teacher.png" alt="">
-                            <span id="instructor-login">Login As Instructor</span>
+                            <span id="lecturer-login">Login As Instructor</span>
                         </button>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
+import { dashboard } from './functionality/DashboardLogic.mjs';
 import { homePage } from './functionality/HomePageLogic.mjs';
-import { studentPage } from './functionality/StudentPageLogic.mjs';
 
 // Function to update the content based on the current route
 function updateContent() {
@@ -7,8 +7,8 @@ function updateContent() {
 
     if (path === '/') {
         homePage();
-    } else if (path === '/student') {
-        studentPage();
+    } else if (path === '/dashboard') {
+        dashboard();
     } else if (path === '/dash') {
 
     } else {
